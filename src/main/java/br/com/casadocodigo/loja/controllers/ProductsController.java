@@ -22,7 +22,7 @@ public class ProductsController {
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView list() {
 		ModelAndView modelAndView = new ModelAndView("products/list");
-		modelAndView.addObject("products", products.list());
+		modelAndView.addObject("products", products.findAll());
 		return modelAndView;
 	}
 	
